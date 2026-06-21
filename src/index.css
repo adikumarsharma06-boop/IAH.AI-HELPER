@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Let's make sure scrollbars and transitions are ultra clean */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Premium 3D Anime Style Background Grid & Keyframes */
+@keyframes gridTravel {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(40px); }
+}
+
+@keyframes orbitClockwise {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes orbitCounterClockwise {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes floatElement {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4)) drop-shadow(0 0 20px rgba(99, 102, 241, 0.1)); }
+  50% { filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.7)) drop-shadow(0 0 35px rgba(99, 102, 241, 0.3)); }
+}
+
+.animate-grid-travel {
+  animation: gridTravel 4s linear infinite;
+}
+
+.animate-orbit-cw {
+  animation: orbitClockwise 20s linear infinite;
+}
+
+.animate-orbit-ccw {
+  animation: orbitCounterClockwise 15s linear infinite;
+}
+
+.animate-float-slow {
+  animation: floatElement 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom 3D Perspective Utility Classes */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.perspective-card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.perspective-card:hover {
+  transform: rotateX(2deg) rotateY(-2deg) translateZ(10px);
+}
+

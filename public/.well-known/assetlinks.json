@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.iah.ultimate_system",
+      "sha256_cert_fingerprints": [
+        "C3:E7:F4:9A:8B:7D:6C:5E:4D:3C:2B:1A:09:90:80:25:93:43:55:63:F1:E0:90:80:70:60:50:40:30:20:10:00"
+      ]
+    }
+  }
+]
